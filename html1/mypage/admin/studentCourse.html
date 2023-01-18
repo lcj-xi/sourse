@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/mypage/css/bootstrap.css">
+    <script src="/mypage/js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="/mypage/plugins/bootstraptable/bootstrap-table.min.css">
+    <link href="/mypage/bootstrap3-editable/css/bootstrap-editable.css">
+
+
+</head>
+<body>
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="addStudentCourse">
+        <div class="modal-dialog" role="document写">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">学生选课信息</h4>
+                </div>
+    
+                <form id="formAddStudentCourse">
+                    <div class="form-group">
+                        <label for="sid">学号</label>
+                        <input type="text" class="form-control" id="sid" name="sid" placeholder="学号">
+                    </div>
+                    <div class="form-group">
+                        <label for="tcid">授课号</label>
+                        <input type="text" class="form-control" id="tcid" name="tcid" placeholder="授课号">
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="addStudentCourse()" id="operation">新增</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+<div class="table-box" style="margin: 20px;">
+    <div id="toolbar">
+
+        <button id="insert" class="btn btn-default"  data-toggle="modal" data-target="#addStudentCourse">插入</button>
+        <form class="form-inline" id="search">
+
+            <div class="form-group">
+                <label class="sr-only" for="sname">Amount (in dollars)</label>
+                <div class="input-group">
+                    <div class="input-group-addon">学生姓名:</div>
+                    <input type="text" class="form-control" id="sname" name="sname" placeholder="学生姓名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="cname">Amount (in dollars)</label>
+                <div class="input-group">
+                    <div class="input-group-addon">课程名:</div>
+                    <input type="text" class="form-control" id="cname" name="cname" placeholder="课程名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="tname">Amount (in dollars)</label>
+                <div class="input-group">
+                    <div class="input-group-addon">教师:</div>
+                    <input type="text" class="form-control" id="tname" name="tname" placeholder="教师">
+                </div>
+            </div>
+        
+            <button type="button" onclick="loadTable2()" class="btn btn-primary">查询</button>
+        </form>
+    </div>
+
+    <table id="studentCourseTable" data-toggle="table"></table>
+</div>
+
+
+    
+<script src="/mypage/js/bootstrap.js"></script>
+<script src="/mypage/js/admin.js"></script>
+<script src="/mypage/plugins/bootstraptable/bootstrap-table.min.js"></script>
+<script src="/mypage/plugins/bootstraptable/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/mypage/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="/mypage/extensions/editable/bootstrap-table-editable.js"></script>
+<script>
+  $(function () {
+      loadTable2();
+  })
+</script>
+
+
+</body>
+</html>

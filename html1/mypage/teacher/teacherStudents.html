@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/mypage/css/bootstrap.css">
+
+
+    <script src="/mypage/js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="/mypage/plugins/bootstraptable/bootstrap-table.min.css">
+    <link href="/mypage/bootstrap3-editable/css/bootstrap-editable.css">
+
+
+</head>
+<body>
+
+
+    <div class="table-box" style="margin: 20px;">
+        <div id="toolbar">
+    
+            <form class="form-inline" id="search">
+                <div class="form-group">
+                    <label class="sr-only" for="cname">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">课程:</div>
+                        <input type="text" class="form-control" id="cname" name="cname" placeholder="课程">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="sname">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">学生姓名:</div>
+                        <input type="text" class="form-control" id="sname" name="sname" placeholder="学生姓名">
+                    </div>
+                </div>
+            
+                <button type="button" onclick="loadTable1()" class="btn btn-primary">查询</button>
+            </form>
+        </div>
+        <table
+    id="teacherStudentTable"
+    data-toggle="table">
+  </table>
+        
+    </div>
+
+ 
+
+
+    
+<script src="/mypage/js/bootstrap.js"></script>
+<script src="/mypage/js/teacher.js"></script>
+<script src="/mypage/js/system.js"></script>
+<script src="/mypage/plugins/bootstraptable/bootstrap-table.min.js"></script>
+<script src="/mypage/plugins/bootstraptable/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/mypage/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="/mypage/extensions/editable/bootstrap-table-editable.js"></script>
+<script>
+    $(function () {
+        loadTable1();
+        
+    })
+  </script>
+
+</body>
+</html>

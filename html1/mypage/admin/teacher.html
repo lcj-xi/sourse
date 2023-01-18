@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/mypage/css/bootstrap.css">
+    <script src="/mypage/js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="/mypage/plugins/bootstraptable/bootstrap-table.min.css">
+    <link href="/mypage/bootstrap3-editable/css/bootstrap-editable.css">
+
+
+
+</head>
+<body>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="addTeacher">
+        <div class="modal-dialog" role="document写">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">教师信息</h4>
+                </div>
+    
+                <form id="formAddTeacher">
+                    <div class="form-group">
+                        <label for="tname">姓名</label>
+                        <input type="text" class="form-control" id="tname" name="tname" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="tpassword">密码</label>
+                        <input type="text" class="form-control" id="tpassword" name="tpassword" placeholder="password">
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="addTeacher()" id="operation">新增</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+<div class="table-box" style="margin: 20px;">
+    <div id="toolbar">
+        <button id="insert" class="btn btn-default"  data-toggle="modal" data-target="#addTeacher">插入</button>
+        <form class="form-inline" id="search">
+        <div class="form-group">
+            <label class="sr-only" for="tname1">Amount (in dollars)</label>
+            <div class="input-group">
+                <div class="input-group-addon">教师姓名:</div>
+                <input type="text" class="form-control" id="tname1" name="tname1" placeholder="教师姓名">
+            </div>
+        </div>
+    
+    
+        <button type="button" onclick="loadTable1()" class="btn btn-primary">查询</button>
+    </form>
+    </div>
+
+    <table id="teacherTable" data-toggle="table">
+    </table>
+    
+</div>
+
+
+
+    
+<script src="/mypage/js/bootstrap.js"></script>
+<script src="/mypage/js/admin.js"></script>
+<script src="/mypage/plugins/bootstraptable/bootstrap-table.min.js"></script>
+<script src="/mypage/plugins/bootstraptable/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/mypage/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="/mypage/extensions/editable/bootstrap-table-editable.js"></script>
+<script>
+  $(function () {
+      loadTable1();
+  })
+</script>
+
+
+</body>
+</html>

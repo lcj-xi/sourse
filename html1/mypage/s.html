@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/mypage/css/bootstrap.css">
+
+
+    <script src="/mypage/js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="/mypage/plugins/bootstraptable/bootstrap-table.min.css">
+    <link href="/mypage/bootstrap3-editable/css/bootstrap-editable.css">
+
+
+</head>
+
+<body>
+
+    <div>
+        <input type="text" name="name" id="id">
+      </div>
+      <div>
+        <input type="text" name="name" id="id">
+      </div>
+      <div>
+        <input type="text" name="name" id="id">
+      </div>
+      <div>
+        <input type="text" name="name" id="id">
+      </div>
+      <div>
+        <input type="text" name="name" id="id">
+      </div>
+    
+      <a href="#" id="username" data-type="text" data-title="用户名">用户名</a>
+<script src="/mypage/js/bootstrap.js"></script>
+<script src="/mypage/plugins/bootstraptable/bootstrap-table.min.js"></script>
+<script src="/mypage/plugins/bootstraptable/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/mypage/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script>
+
+var s=$("#id");
+s.blur(function(){
+console.log("sksk");
+s.editable();
+    });
+
+
+    $(function () {
+        $('#username').editable();
+    });
+</script>
+
+
+</body>
+</html>

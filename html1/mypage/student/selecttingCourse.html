@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/mypage/css/bootstrap.css">
+    <script src="/mypage/js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="/mypage/plugins/bootstraptable/bootstrap-table.min.css">
+
+
+</head>
+<body>
+    <div class="table-box" style="margin: 20px;">
+        <div id="toolbar">
+    
+            <form class="form-inline" id="courseSearch">
+                <div class="form-group">
+                    <label class="sr-only" for="cname">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">课程:</div>
+                        <input type="text" class="form-control" id="cname" name="cname" placeholder="课程">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="sname">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">教师:</div>
+                        <input type="text" class="form-control" id="tname" name="tname" placeholder="教师">
+                    </div>
+                </div>
+        
+                <button type="button" onclick="loadTable1()" class="btn btn-primary">查询</button>
+            </form>
+        </div>
+    
+        <table id="courses" data-toggle="table"></table>
+        
+    </div>
+
+
+
+
+
+    
+<script src="/mypage/js/bootstrap.js"></script>
+<script src="/mypage/js/student.js"></script>
+<script src="/mypage/plugins/bootstraptable/bootstrap-table.min.js"></script>
+<script src="/mypage/plugins/bootstraptable/locale/bootstrap-table-zh-CN.min.js"></script>
+<script>
+    $(function () {
+        loadTable1();
+    })
+</script>
+
+</body>
+</html>
